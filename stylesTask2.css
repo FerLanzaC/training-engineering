@@ -1,0 +1,54 @@
+body{ 
+    font-family: Ubuntu;
+}
+
+.button{
+    border-style: solid;
+    border-color: #000000;
+    background-color: #000000;
+    border-radius: 15px;
+    width: 120px;
+    float: right;
+    text-align: center;
+    color: #FFFFFF;
+} 
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    background-color: #D3D3D3;
+    list-style-type: none;
+}
+
+.element {
+    background-color: #f1f1f1;
+    padding: 16px;
+    text-align: justify;
+    font-size: 1.0625rem;   
+}
+
+@media screen 
+  and (min-device-width: 768px)  
+  and (max-device-width: 1270px) { 
+    .element{
+        width: 350px;
+    }
+    .container{
+        width: 1280px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen 
+  and (min-device-width: 1280px) { 
+    .element{
+        width: 350px;
+    }
+    .container{
+        width: 1280px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+
+    }
+}
