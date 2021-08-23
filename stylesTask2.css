@@ -13,7 +13,7 @@ body{
     color: #FFFFFF;
 } 
 
-.container{
+.grid{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
@@ -34,7 +34,7 @@ body{
     .element{
         width: 350px;
     }
-    .container{
+    .grid{
         width: 1280px;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -45,7 +45,7 @@ body{
     .element{
         width: 350px;
     }
-    .container{
+    .grid{
         width: 1280px;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
