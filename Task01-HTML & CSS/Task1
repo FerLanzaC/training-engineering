@@ -19,7 +19,7 @@
          </p>
          <p>
             <b>Desde: $15 / 12 horas</b>
-            <a class= "button">Contratar</a>
+            <button class= "button">Contratar</button>
          </p>
       </div>
    </div>
@@ -33,7 +33,7 @@
          </p>
          <p>
             <b>Desde: $15 / 12 horas</b>
-            <a class= "button">Contratar</a>
+            <button class= "button">Contratar</button>
          </p>
       </div>
    </div>
@@ -47,7 +47,7 @@
          </p>
          <p>
             <b>Desde: $15 / 12 horas</b>
-            <a class= "button">Contratar</a>
+            <button class= "button">Contratar</button>
          </p>
       </div>
    </div>
