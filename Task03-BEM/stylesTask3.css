@@ -1,8 +1,25 @@
-body{ 
+.body{ 
     font-family: Ubuntu;
 }
 
-.container_element-button{
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0.625rem;
+    background-color: #D3D3D3;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.element {
+    background-color: #f1f1f1;
+    padding: 14px;
+    padding-top: 2px;
+    text-align: justify;
+    font-size: 1.0625rem;   
+}
+
+.element__button {
     border-style: solid;
     border-color: #000000;
     background-color: #000000;
@@ -13,29 +30,12 @@ body{
     font-size: 2rem;
 } 
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0.625rem;
-    background-color: #D3D3D3;
-    list-style-type: none;
-    padding: 15px;
-}
-
-.container_element{
-    background-color: #f1f1f1;
-    padding: 14px;
-    padding-top: 2px;
-    text-align: justify;
-    font-size: 1.0625rem;   
-}
-
-.container_element-image {
+.element__image {
     margin-right: 20px;
     width: 30%;
 }
 
-.container_element-text{
+.element__footer {
     font-size: 2rem;
     font-family: Ubuntu;
 }
@@ -43,21 +43,21 @@ body{
 @media screen 
   and (min-device-width: 768px)  
   and (max-device-width: 1270px) { 
-    .container_element{
+    .element{
         width: 350px;
     }
     .container{
         width: 1280px;
         grid-template-columns: repeat(3, 1fr);
     }
-    .container_element-button,.container_element-text{
+    .element__button,.element__footer{
         font-size: 1.0625rem;
     }
 }
 
 @media screen 
   and (min-device-width: 1280px) { 
-    .container_element{
+    .element{
         width: 350px;
     }
     .container{
@@ -66,7 +66,7 @@ body{
         justify-items: center;
 
     }
-    .container_element-button,.container_element-text{
+    .element__button,.element__footer{
         font-size: 1.0625rem;
     }
 }
