@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+   <meta charset= "utf-8">
+   <title>Task 6</title>
+   <link rel="stylesheet" type="text/css" href="stylesTask6.css" media="screen">
+   <link href="http://fonts.cdnfonts.com/css/neuropol-2" rel="stylesheet">
+</head>  
+<body class= "body">    
+   <header class= "header">
+      <div class= "header__body">
+         <img src="images/logo.png" class="header__img">
+         <button class="header__button">
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle"></canvas>
+         </button>
+      </div>
+   </header>  
+   <main>
+      <div class= "searcher">
+         <img src="images/banner-mobile.png" class="searcher__image" >
+         <div class="searcher__title">Los Mejores agentes de seguridad</div>
+         <div class="searcher__bar">
+            <input type="text" class= "searcher__input" placeholder=" Buscar por Ubicación"> 
+            <img src="images/search.png" class="searcher__icon"/>     
+         </div>
+      </div>
+      <div class= "container">
+         <div class= "elementsContainer" id="elementsContainer">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js"></script>
+            <script type="Task5/x-tmpl" id="elementTmpl">
+               {{#agentCard}}
+                  <div class= "element">
+                     <div class= "element__header">
+                        <h3>{{title}}</h3>
+                        <img class= "element__icon" src= "images/certified.svg">
+                     </div>
+                     <div class= "element__body">
+                        <div class= "element__topBody">
+                           <img class= "element__image" src= {{photo}}>
+                           <p class= "element__description">{{description}}</p>
+                        </div>
+                        <div class= "element__bottomBody">
+                           <b>{{price}}</b>
+                           <button class= "element__button">Contratar</button>
+                        </div>
+                     </div>
+                  </div>
+               {{/agentCard}}
+            </script>
+            <script>
+               var data = {
+                  agentCard: [
+                     { 
+                       "title": "Chuck Norris Bodyguards", 
+                        "photo": "images/logo/chuck-norris.png",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     },
+                     { 
+                        "title": "Power Rangers Squad", 
+                        "photo": "images/logo/power-rangers.png",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     },
+                     { 
+                        "title": "Kame Security Ltda.", 
+                        "photo": "images/logo/kame.png",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     },
+                     { 
+                        "title": "Capsule Corp", 
+                        "photo": "images/logo/capsule-corp.jpg",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     },
+                     { 
+                        "title": "Raptor Squad", 
+                        "photo": "images/logo/raptor-squad.jpg",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     },
+                     { 
+                        "title": "Donuts Security", 
+                        "photo": "images/logo/donuts-security.png",
+                        "description": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Fusce eleifend vel enim ac lacinia.Phasellus ac nisl id velit tristique accumsan nec at enim.Etiam posuere tellus ut ligula feugiat auctor.Morbi ut quam aliquet, viverra purus in, convallis ante.",
+                        "price":"Desde: $15 / 12 horas"
+                     }
+                  ]
+               };
+               var tmpl = document.getElementById("elementTmpl").innerHTML;
+               var html = Mustache.to_html(tmpl, data);
+               var elementsContainer = document.getElementById("elementsContainer");
+               elementsContainer.innerHTML = html;
+            </script>
+         </div>
+      </div>
+   </main>
+   <footer class= "footer">
+      <div class= "footer__body">
+         <small class="footer__description">Desarrollado por Akurey.com Todos los derechos reservados.</small>
+         <u class="footer__bottomBody">Terminos y Condiciones
+      </div>
+   </footer>
+</body>  
+</html> 
