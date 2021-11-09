@@ -38,5 +38,21 @@
     "hours": "8",
     "isCertified": false,
     "image": "http://akurey.com/trainings/companies/raptor-squad-logo.jpg"
+  },
+  {
+    "name": "Donuts Security",
+    "description": "Reina en mi espíritu una alegría admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aquí con delicia.",
+    "rate": "50",
+    "hours": "12",
+    "isCertified": false,
+    "image": "http://akurey.com/trainings/companies/donuts-security.png"
+  },
+  {
+    "name": "S.H.I.E.L.D",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.",
+    "rate": "250",
+    "hours": "12",
+    "isCertified": false,
+    "image": "http://akurey.com/trainings/companies/shield-logo.png"
   }
 ]
