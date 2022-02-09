@@ -1,32 +1,20 @@
-**PR name: <full ticket name>** 
+# PR name: <full ticket name> 
 -- 
 
-**Requirements: **
+## Description: 
 
   #Detailed list of problem requirements can be taken from the training guide
 --
-**Brief description:  **
-  ##A brief description of the implemented solution, if I use something more than indicated or if you had any difficulty
+  
+## Type of change:  
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
+
+## How has this been tested?
 
 
---
 
-
-**#DELETE THIS#**
-Example: 
-
-PR name: Task # A1: HTML & CSS 
--- 
-Requirements: 
-
-    Using only CSS and HTML, create a page like the following: 
-    You must use at least 1 Google Font to style the texts and titles. 
-    For the image use this url as src https://via.placeholder.com/175
-                         
---
-Brief description: 
-    Chuck Norris in the house !! 
-    
-    
 PR name match with the ticket respective in Trello. 
-**#DELETE THIS#**
+
