@@ -1,0 +1,1 @@
+-Use the result of the Walk exercise. -Rename the CSS classes and tags in the HTML to follow the BEM standard
