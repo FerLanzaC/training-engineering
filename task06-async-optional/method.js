@@ -5,7 +5,7 @@ async function sayJoke(apiUrl, jokeId) {
   if (!jokesChristmas) {
       throw new Error (`No jokes at url: ${apiUrl}`);
   } else {
-    for(let joke of json.jokes) {
+    for(let joke of jokesChristmas) {
         if (joke.id == jokeId) {
           return {saySetup: () => joke.setup,
                  sayPunchLine: () => joke.punchLine
