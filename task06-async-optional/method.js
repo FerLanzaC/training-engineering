@@ -11,7 +11,7 @@ async function sayJoke(apiUrl, jokeId) {
                  sayPunchLine: () => joke.punchLine
                 };
      }
-      throw new Error (`No jokes found id: ${jokeId}`);
+      throw new Error (`No jokes found with id: ${jokeId}`);
     }
   }
 };
