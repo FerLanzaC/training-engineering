@@ -1,7 +1,7 @@
 async function sayJoke(apiUrl, jokeId) {
   const response = await fetch(apiUrl)
   const json = await response.json()
-  const jokesChristmas = await json.jokes;
+  const jokesChristmas = json.jokes;
   if (!jokesChristmas) {
       throw new Error (`No jokes at url: ${apiUrl}`);
   } else {
