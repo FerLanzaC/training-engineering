@@ -3,7 +3,7 @@ async function sayJoke(apiUrl, jokeId) {
   const json = await response.json()
   const jokesChristmas = await json.jokes;
   if (!jokesChristmas) {
-      throw new Error(`No jokes at url: ${apiUrl}`);
+      throw new Error (`No jokes at url: ${apiUrl}`);
   } else {
     for(let joke of json.jokes) {
         if (joke.id == jokeId) {
