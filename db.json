@@ -2,7 +2,7 @@
     "companies": [
       {
         "name": "Chuck Norris' Bodyguards",
-        "description": "Carlos Ray Norris (born March 10, 1940) is an American martial artist and actor. After serving in the United States Air Force, he began his rise to fame as a martial artist and has since founded his own school, Chun Kuk Do.",
+        "description": "Carlos Ray Norris (born March 10, 1940) is an American martial artist and actor. After serving in the United States Air Force, he began his rise to fame as a martial artist.",
         "rate": "500",
         "hours": "8",
         "isCertified": true,
@@ -10,7 +10,7 @@
       },
       {
         "name": "Power Rangers Squad",
-        "description": "Power Rangers is an American entertainment and merchandising franchise built around a live-action superhero television series, based on the Japanese tokusatsu franchise Super Sentai.In 2010, Haim Saban, creator of the series, regained ownership of the franchise.",
+        "description": "Power Rangers is an American entertainment and merchandising franchise built around a live-action superhero television series, based on the Japanese tokusatsu franchise Super Sentai.",
         "rate": "100",
         "hours": "12",
         "isCertified": false,
@@ -42,7 +42,7 @@
       },
       {
         "name": "Donuts Security",
-        "description": "Chief Clarence Clancy Wiggum is a fictional character from the animated television series The Simpsons, voiced by Hank Azaria. He is the chief of police in the show's setting of Springfield, and is the father of Ralph Wiggum and the husband of Sarah Wiggum.",
+        "description": "Chief Clarence Clancy Wiggum is a fictional character from the animated television series The Simpsons, voiced by Hank Azaria. He is the chief of police in the show's setting of Springfield.",
         "rate": "50",
         "hours": "12",
         "isCertified": false,
@@ -50,7 +50,7 @@
       },
       {
         "name": "S.H.I.E.L.D",
-        "description": "S.H.I.E.L.D. is a fictional espionage, special law enforcement, and counter-terrorism agency appearing in American comic books published by Marvel Comics. Created by Stan Lee and Jack Kirby in Strange Tales #135, it often deals with paranormal and superhuman threats to international security.",
+        "description": "S.H.I.E.L.D. is a fictional espionage, special law enforcement, and counter-terrorism agency appearing in American comic books published by Marvel Comics. Created by Stan Lee and Jack Kirby in Strange.",
         "rate": "250",
         "hours": "12",
         "isCertified": false,
