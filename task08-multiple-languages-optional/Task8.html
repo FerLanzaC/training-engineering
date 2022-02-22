@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+   <meta charset= "utf-8">
+   <title>Task 8</title>
+   <link rel="stylesheet" type="text/css" href="stylesTask8.css" media="screen">
+   <link href="http://fonts.cdnfonts.com/css/neuropol-2" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/translate@1/translate.min.js"></script>
+
+</head>  
+<body class= "body">    
+   <header class= "header">
+      <div class= "header__body">
+         <img src="images/logo.png" class="header__img">
+         <button class="header__button">
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle"></canvas>
+         </button>
+      </div>
+   </header>  
+   <main>
+      <div class= "searcher">
+         <img src="images/banner-mobile.png" class="searcher__image" >
+         <div class="searcher__title">Los Mejores agentes de seguridad</div>
+         <div class="searcher__bar">
+            <input type="text" placeholder="Buscar por nombre" class="searcher__input"
+            id="searcher__bar-text"/>
+          <button class="searcher__button" id="searcher__button" onclick="filterData()">
+            <img src="./images/search.png" class="searcher__icon"/> 
+          </button>   
+         </div>
+      </div>
+      <div class= "container">
+         <div class="elementsContainer">
+            <script id="template" type="x-tmpl-mustache">
+               <div class="element" >
+                  <div class= "element__header">
+                     <h3>{{name}}</h3>
+                     <img class= "element__icon" src= "images/certified.svg">
+                  </div>
+                  <div class= "element__body">
+                     <div class= "element__topBody">
+                        <img class= "element__image" src= {{image}}>
+                        <p class= "element__description">{{description}}</p>
+                     </div>
+                     <div class= "element__bottomBody">
+                        <b>Desde: ${{rate}} / {{hours}} horas</b>
+                        <button class= "element__button">Contratar</button>
+                     </div>
+               </div>
+              </div>
+            </script>
+        </div>
+        <script src="methods.js"></script>
+      </div>
+   </main>
+   <footer class= "footer">
+      <div class= "footer__body">
+         <small class="footer__description">Desarrollado por Akurey.com Todos los derechos reservados.</small>
+         <u class="footer__bottomBody">Terminos y Condiciones
+      </div>
+   </footer>
+</body>  
+</html> 
