@@ -2,12 +2,12 @@
 /*Order the list by alphabetical order*/ 
 function sortJSON(data, key) {
   return data.sort(function (firstElement, secondElement) {
-      var firstCompany = firstElement[key]
-      var secondCompany = secondElement[key];
-      if (firstCompany < secondCompany){
+      const firstCompany = firstElement[key]
+      const secondCompany = secondElement[key];
+      if (firstCompany < secondCompany) {
         return -1;
       }
-      else if (firstCompany > secondCompany){
+      else if (firstCompany > secondCompany) {
         return 1;
       }
       else{
@@ -17,49 +17,55 @@ function sortJSON(data, key) {
 }
 
 /*Translate the data*/
-const translateData = async (companies) => {
+const translateData = async (companies,language) => {
   for (let index = 0; index < 7; index++) {
     let item = companies[index].description;
-    const spanish = await translate(item, { to: "es" });
-    companies[index].description = spanish;
+    if(language== "es") {
+      const spanish = await translate(item, { to: "es" });
+      companies[index].description = spanish;
+    } else {
+      const english = await translate(item, { to: "en" });
+      companies[index].description = english;
+    }
   }
   return companies;
 };
 
 /*Read the JSON and create a list of objects*/
-let getCompanies = new Promise(async function (resolve, reject) {
+let getCompanies = async function(language) {
   let url = "https://my-json-server.typicode.com/FerLanzaC/training-engineering/companies";
   const response = await fetch(url);
   const json = await response.json();
   const companies = sortJSON(json, 'name');
-  const translatedData = translateData(companies);
+  const translatedData = translateData(companies,language);
   if (companies !== null) {
-    resolve(translatedData);
+    return(translatedData);
   } else {
-    let reason = new Error("Problem obtain data");
-    reject(reason);
+    throw new Error('Problem to obtain data');
   }
-});
+};
 
 
 /*Filter and display the data*/
-const filterCompaniesData = (nameFilter) => {
-  getCompanies
-    .then(function (companies) {
+const filterCompaniesData = async (nameFilter,language) => {
+  try {
+    getCompanies(language)
+    .then(companies => {
       $(".element").remove();
-      $.each(companies, function (index, item) {
-        if(item.name.includes(nameFilter)){
+      $.each(companies, (index, item) => {
+        if(item.name.includes(nameFilter)) {
           let template = document.getElementById("template").innerHTML;
-        $(".elementsContainer").append(Mustache.render(template, item));
+          $(".elementsContainer").append(Mustache.render(template, item));
         }
       });
     })
-    .catch(function (error) {
+  }
+  catch(error) {
       console.log(error.message);
-    });
+  }
 };
 
-filterCompaniesData("");
+filterCompaniesData("",'en');
 
 /*Save the information of the search bar and call filterCompaniesData*/ 
 const filterData = () => {
