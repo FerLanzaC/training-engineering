@@ -4,7 +4,7 @@ import AllCards from './components/AllCards';
 import Searcher from './components/Searcher';
 import Footer from './components/Footer';
 
-function App() {
+const App = ()=> {
   return (
     <div className = 'body'>
       <MainNavigation/>
