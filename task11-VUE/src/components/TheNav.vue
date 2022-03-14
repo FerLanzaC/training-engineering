@@ -1,0 +1,56 @@
+<template>
+  <header class= "header">
+      <div class= "header__body">
+        <img src="../assets/img/logo.png" class="header__img">
+         <button class="header__button">
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle" ></canvas>
+            <canvas class="header__rectangle"></canvas>
+         </button>
+      </div>
+   </header>  
+</template>
+
+
+<style>
+.header {
+  background-color: #000000;
+  height: 70px;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.header__image {
+  width: 195px;
+  height: 61px;
+  margin-top: 20px;
+}
+
+.header__button {
+  background-color: #000;
+  width: 53px;
+  height: 43px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-style: none;
+}
+
+.header__rectangle {
+  border: solid 1px #FFFFFF;
+  background-color: #FFFFFF;
+  width: 53px;
+  height: 5px;
+}
+</style>
